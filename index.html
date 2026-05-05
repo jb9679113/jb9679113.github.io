@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽毛球新手教学计划 | 山青浩然校友俱乐部</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .header .channel-info {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .header .channel-info a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .header .channel-info a:hover {
+            text-decoration: underline;
+        }
+
+        .header .tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 {
+            color: #555;
+            font-size: 1.2em;
+            margin: 20px 0 15px;
+        }
+
+        .section h4 {
+            color: #666;
+            font-size: 1em;
+            margin: 15px 0 10px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .principles {
+            display: grid;
+            gap: 15px;
+        }
+
+        .principle-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .principle-icon {
+            font-size: 1.5em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .video-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .video-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .video-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .video-item.highlight {
+            border-left: 4px solid #dc3545;
+            background: #fff5f5;
+        }
+
+        .video-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .video-meta {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .video-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .video-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .video-link svg {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-family: "Consolas", "Monaco", monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .tips-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tips-box h4 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+
+        .dag-tip {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d4ecfe 100%);
+            border-left: 4px solid #2196f3;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .dag-tip h4 {
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+
+        .schedule {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: monospace;
+            white-space: pre-line;
+            line-height: 1.8;
+        }
+
+        .progress-check {
+            display: grid;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .check-item input {
+            width: 20px;
+            height: 20px;
+            accent-color: #667eea;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+        }
+
+        .star {
+            color: #ffc107;
+        }
+
+        .priority-high { color: #dc3545; font-weight: bold; }
+        .priority-med { color: #ffc107; font-weight: bold; }
+
+        .course-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .video-source {
+            font-size: 0.8em;
+            color: #667eea;
+            background: #f0f0ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            table th, table td {
+                padding: 8px 10px;
+            }
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .nav a:hover {
+            background: #f0f0ff;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.5em;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .back-to-top.hidden {
+            display: none;
+        }
+
+        .learning-path {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .path-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .path-number {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .path-content {
+            flex: 1;
+        }
+
+        .path-title {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .path-video {
+            font-size: 0.85em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="#principles">教学理念</a>
+            <a href="#grip">第1课握拍</a>
+            <a href="#serve">第2课发球</a>
+            <a href="#footwork">第3课步法</a>
+            <a href="#backhand">第4课反手</a>
+            <a href="#clear">第5课高远球</a>
+            <a href="#smash">第6课杀球</a>
+            <a href="#videos">视频汇总</a>
+        </div>
+
+        <header class="header">
+            <h1>🏸 羽毛球新手教学计划</h1>
+            <div class="subtitle">山青浩然 · 校友羽毛球俱乐部</div>
+            <div class="channel-info">
+                📺 教学视频来源：<a href="https://space.bilibili.com/1423436652" target="_blank">大G羽毛球</a> · 粉丝 19.3万 · 刘辉教练系列
+            </div>
+            <div class="tags">
+                <span class="tag">适用对象：零基础新手</span>
+                <span class="tag">教学目标：掌握基础，愉快打球</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- 教学理念 -->
+            <section class="section" id="principles">
+                <h2>📌 教学理念</h2>
+
+                <h3>🎯 核心原则</h3>
+                <div class="principles">
+                    <div class="principle-item">
+                        <span class="principle-icon">🌱</span>
+                        <div>
+                            <strong>新手友好</strong><br>
+                            循序渐进，先建立正确发力框架，不急于追求专业动作
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <span class="principle-icon">📺</span>
+                        <div>
+                            <strong>大G教学法</strong><br>
+                            以大G羽毛球的刘辉教练系列为核心，体系完整，干货满满
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <span class="principle-icon">🤝</span>
+                        <div>
+                            <strong>校友带练</strong><br>
+                            视频学习 + 场上实践结合，学长示范纠错
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <span class="principle-icon">💪</span>
+                        <div>
+                            <strong>健康运动</strong><br>
+                            以锻炼身体为主，享受运动乐趣
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dag-tip">
+                    <h4>💡 大G教学法核心理念</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>内旋是结果不是动作</strong>：不要刻意做内旋，让它自然发生</li>
+                        <li><strong>击球前放松，击球瞬间抓紧</strong>：发力集中的秘诀</li>
+                        <li><strong>启动步要带方向性</strong>：不是垂直跳，是往来球方向蹬</li>
+                        <li><strong>先框架后发力</strong>：把动作做对再追求力量</li>
+                        <li><strong>左手左腿是发力核心</strong>：非持拍手不是摆设，是平衡和蓄力</li>
+                    </ul>
+                </div>
+
+                <h3>📺 大G羽毛球频道信息</h3>
+                <table>
+                    <thead><tr><th>信息来源</th><th>内容风格</th><th>适用阶段</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>大G羽毛球</strong>（刘辉教练系列）</td><td>体系完整，原理清晰，业余友好</td><td>全部内容</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 第1课：握拍与发力 -->
+            <section class="section" id="grip">
+                <h2><span class="course-number">1</span>握拍与发力</h2>
+                
+                <div class="card">
+                    <h3>📌 学习目标</h3>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>掌握正手握拍方法</li>
+                        <li>理解内旋发力的原理</li>
+                        <li>学会"放松-抓紧"的发力节奏</li>
+                    </ul>
+                </div>
+
+                <h3>📺 必看视频</h3>
+                <div class="video-list">
+                    <div class="video-item highlight">
+                        <div class="video-title">⭐⭐⭐ 内旋发力握拍教学！内旋发力必学第一课！</div>
+                        <div class="video-meta">⏱️ 18分钟 | 大G羽毛球频道王牌视频</div>
+                        <a href="https://www.bilibili.com/video/BV1kc2UY8ELQ/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                </div>
+
+                <h3>📝 技术要点（大G教学法）</h3>
+
+                <h4>正手握拍步骤</h4>
+                <div class="code-block">1. 虎口对准拍柄窄面
+2. 拇指贴在宽面上（支点位置）
+3. 食指与中指自然分开
+4. 掌心留有空隙（关键！）
+5. 握拍放松，击球瞬间抓紧</div>
+
+                <h4>内旋发力的核心（大G强调）</h4>
+                <table>
+                    <thead><tr><th>要素</th><th>大G的说法</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>支点</td><td><strong>拇指当支点</strong></td><td>支点位置决定发力方向</td></tr>
+                        <tr><td>发力方式</td><td><strong>内旋发力</strong></td><td>手腕内旋，不是手臂发力</td></tr>
+                        <tr><td>手肘</td><td><strong>不要伸太直</strong></td><td>保持微曲，蓄力更好</td></tr>
+                        <tr><td>关键节奏</td><td><strong>放松→抓紧</strong></td><td>击球前放松，击球瞬间抓紧</td></tr>
+                        <tr><td>框架</td><td><strong>静止框架锁拍</strong></td><td>挥拍前先有框架，动作不变形</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box">
+                    <h4>⚠️ 常见错误（大G纠错）</h4>
+                    <table>
+                        <thead><tr><th>错误</th><th>后果</th><th>解决方法</th></tr></thead>
+                        <tbody>
+                            <tr><td>刻意做内旋</td><td>发力僵硬，击球点丢失</td><td>内旋是结果不是动作，自然发生</td></tr>
+                            <tr><td>握拍过紧</td><td>发力不足，手腕酸痛</td><td>掌心留空，多练放松手腕</td></tr>
+                            <tr><td>甩大臂</td><td>发力分散，击球点不固定</td><td>业余不用担忧大臂问题，重点在框架</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tips-box">
+                    <h4>🏃 练习方法</h4>
+                    <ol style="margin-left: 20px;">
+                        <li><strong>空挥拍练习</strong>：每天空挥拍5-10分钟，体会内旋发力</li>
+                        <li><strong>对墙击球</strong>：固定击球点，找发力感觉</li>
+                        <li><strong>慢动作分解</strong>：先慢做框架，再逐步加速</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 第2课：正手发高远球 -->
+            <section class="section" id="serve">
+                <h2><span class="course-number">2</span>正手发高远球</h2>
+
+                <div class="card">
+                    <h3>📌 学习目标</h3>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>掌握正手发高远球的标准动作</li>
+                        <li>能够稳定发出过网球</li>
+                        <li>为后续高远球学习打基础</li>
+                    </ul>
+                </div>
+
+                <h3>📺 必看视频</h3>
+                <div class="video-list">
+                    <div class="video-item highlight">
+                        <div class="video-title">⭐⭐⭐ 正手发高远球教学！30分钟零基础加进阶！</div>
+                        <div class="video-meta">⏱️ 30分钟 | 从原理到动作完整讲解</div>
+                        <a href="https://www.bilibili.com/video/BV1Xoe9zkEVT/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                </div>
+
+                <h3>📝 技术要点（大G教学法）</h3>
+
+                <h4>正手发高远球动作分解</h4>
+                <div class="code-block">准备姿势：
+├── 持球手在身前，持球头朝下
+└── 持拍手在身侧，拍头朝后
+
+引拍动作：
+├── 拍子后拉至身体侧面
+├── 非持拍手自然抬起
+└── 重心中等高度
+
+击球动作（关键）：
+├── 击球高度：胸前高度最佳
+├── 手腕发力（不是大臂！）
+├── 球拍向前上方移动
+└── 击球瞬间抓紧
+
+随挥动作：
+└── 球拍顺势向前上方跟随</div>
+
+                <h4>发球要点（大G强调）</h4>
+                <table>
+                    <thead><tr><th>要素</th><th>大G的说法</th><th>常见问题</th></tr></thead>
+                    <tbody>
+                        <tr><td>击球高度</td><td><strong>胸前高度最佳</strong></td><td>过低球不过网，过高手腕压力大</td></tr>
+                        <tr><td>发力</td><td><strong>手腕发力，不要大臂</strong></td><td>大臂发力球速不稳</td></tr>
+                        <tr><td>眼睛</td><td><strong>全程紧盯羽毛球</strong></td><td>眼睛不看球，击球不准</td></tr>
+                        <tr><td>球拍跟进</td><td><strong>击球后继续向前上方</strong></td><td>拍子停在击球点，球没有速度</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box">
+                    <h4>⚠️ 大G常见纠错</h4>
+                    <table>
+                        <thead><tr><th>错误</th><th>后果</th><th>解决方法</th></tr></thead>
+                        <tbody>
+                            <tr><td>发力过猛</td><td>球经常出界</td><td>降力练手腕，感受发力传递</td></tr>
+                            <tr><td>击球点太低</td><td>球不过网</td><td>提高击球点至胸前</td></tr>
+                            <tr><td>架拍太高</td><td>发力不集中</td><td>架拍不要过高，框架要稳</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tips-box">
+                    <h4>🏃 发球练习步骤</h4>
+                    <ol style="margin-left: 20px;">
+                        <li><strong>徒手模仿</strong>：先不做击球，只练架拍和引拍</li>
+                        <li><strong>分解练习</strong>：架拍→引拍→击球→随挥，分开练</li>
+                        <li><strong>对练发球</strong>：两人隔网发球，互相纠正</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 第3课：步法训练 -->
+            <section class="section" id="footwork">
+                <h2><span class="course-number">3</span>步法训练</h2>
+
+                <div class="card">
+                    <h3>📌 学习目标</h3>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>掌握启动步的核心要领</li>
+                        <li>学会后场两点步法</li>
+                        <li>能够流畅移动到位</li>
+                    </ul>
+                </div>
+
+                <h3>📺 必看视频</h3>
+                <div class="video-list">
+                    <div class="video-item highlight">
+                        <div class="video-title">⭐⭐⭐ 启动步的秘密！</div>
+                        <div class="video-meta">大G总结安洗莹的启动步特点 | 接杀接吊步法核心</div>
+                        <a href="https://www.bilibili.com/video/BV1CmcRepECr/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-title">后场两点步法教学！教小姐姐步法从0到1！</div>
+                        <div class="video-meta">从0到1完整步法教学 | 业余通病侧身和朝向问题纠错</div>
+                        <a href="https://www.bilibili.com/video/BV1Rc6GYwEe5/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                </div>
+
+                <h3>📝 技术要点（大G教学法）</h3>
+
+                <h4>启动步（大G核心）</h4>
+                <div class="code-block">什么是启动步？
+├── 在移动之前，有一个微小的重心下沉
+├── 这个重心下沉让你"连接"两次移动
+├── 带有方向性，不是垂直上下跳
+└── 主动球和被动球的启动方式不同
+
+为什么重要？
+├── 接杀接吊的核心关键
+├── 步伐连贯的关键
+└── 决定步法是否有节奏</div>
+
+                <h4>基础步法类型（大G总结）</h4>
+                <table>
+                    <thead><tr><th>步法</th><th>适用场景</th><th>特点</th><th>大G要点</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>启动步</strong></td><td>所有移动前</td><td>连接两次移动</td><td>带方向性，不是垂直跳</td></tr>
+                        <tr><td><strong>并步</strong></td><td>接近距离球</td><td>双脚交替小幅</td><td>小步快跑，保持节奏</td></tr>
+                        <tr><td><strong>交叉步</strong></td><td>远距离移动</td><td>右脚向前交叉</td><td>蹬转结合，移动更远</td></tr>
+                        <tr><td><strong>蹬跨步</strong></td><td>跨步击球</td><td>单脚蹬地跨出</td><td>创造发力空间</td></tr>
+                        <tr><td><strong>垫步</strong></td><td>调整位置</td><td>小步调整</td><td>最后一步微调</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>步法四要素（大G强调）</h4>
+                <div class="code-block">1. 启动：重心微沉，随时准备移动（带方向性！）
+2. 移动：重心保持稳定，不要起伏过大
+3. 击球：到位后稳定站位
+4. 回动：击球后快速回到中心位置</div>
+
+                <div class="warning-box">
+                    <h4>⚠️ 大G常见纠错</h4>
+                    <table>
+                        <thead><tr><th>错误</th><th>后果</th><th>解决方法</th></tr></thead>
+                        <tbody>
+                            <tr><td>启动步是垂直跳</td><td>无法移动方向</td><td>启动要带方向性，往来球方向蹬</td></tr>
+                            <tr><td>大步跨跳</td><td>重心不稳，容易摔倒</td><td>小步快跑，保持节奏</td></tr>
+                            <tr><td>只用手够球</td><td>击球点不佳</td><td>用步法调整到位，不是伸手够球</td></tr>
+                            <tr><td>不回中心</td><td>被对手打空位</td><td>养成回动习惯，步法才完整</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tips-box">
+                    <h4>🏃 步法练习方法</h4>
+                    <ol style="margin-left: 20px;">
+                        <li><strong>启动步单独练</strong>：先感受有方向性的启动</li>
+                        <li><strong>四角步法</strong>：四角移动，建立基础步法框架</li>
+                        <li><strong>后场两点步法</strong>：结合后场击球练习移动</li>
+                        <li><strong>启动步连贯练习</strong>：移动中连贯使用启动步</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 第4课：反手高远球 -->
+            <section class="section" id="backhand">
+                <h2><span class="course-number">4</span>反手高远球入门</h2>
+
+                <div class="card">
+                    <h3>📌 学习目标</h3>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>理解反手高远球的基本原理</li>
+                        <li>掌握反手握拍的变化</li>
+                        <li>了解何时使用反手击球</li>
+                    </ul>
+                </div>
+
+                <h3>📺 必看视频</h3>
+                <div class="video-list">
+                    <div class="video-item highlight">
+                        <div class="video-title">⭐⭐⭐ 反手高远球教学！从0到1 (1)：理论篇！</div>
+                        <div class="video-meta">⏱️ 16分钟 | 理论+实践结合 | 保姆级反手发力课</div>
+                        <a href="https://www.bilibili.com/video/BV1bBUHYTENd/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                </div>
+
+                <h3>📝 技术要点（大G教学法）</h3>
+
+                <h4>反手握拍（大G核心）</h4>
+                <div class="code-block">反手握拍要点：
+├── 捏两窄边（支点位置，高级握法）
+├── 手腕微屈，准备发力
+├── 与正手握拍可以快速切换
+└── 非持拍手辅助平衡</div>
+
+                <table>
+                    <thead><tr><th>要素</th><th>大G的说法</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>握拍</td><td><strong>捏两窄边</strong></td><td>刘辉教练推荐，比传统握法更高级</td></tr>
+                        <tr><td>击球时机</td><td><strong>找球和击球时机</strong></td><td>业余卡在这里的不少</td></tr>
+                        <tr><td>发力</td><td><strong>小臂内旋</strong></td><td>和正手内旋原理相同</td></tr>
+                        <tr><td>变拍</td><td><strong>快速切换正反手</strong></td><td>反手万能握拍，一拍通用</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 第5课：高远球综合 -->
+            <section class="section" id="clear">
+                <h2><span class="course-number">5</span>高远球综合学习</h2>
+
+                <div class="card">
+                    <h3>📌 学习目标</h3>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>建立对高远球的整体认知</li>
+                        <li>理解高远球发力的正确顺序</li>
+                        <li>能够打出场上有效果的高远球</li>
+                    </ul>
+                </div>
+
+                <h3>📺 必看视频</h3>
+                <div class="video-list">
+                    <div class="video-item highlight">
+                        <div class="video-title">⭐⭐⭐ 业余初学者如何学习高远球技术？G哥方法总结！</div>
+                        <div class="video-meta">所有技术通用的学习顺序 | 高远球学习路径</div>
+                        <a href="https://www.bilibili.com/video/BV1src8enEvy/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                </div>
+
+                <h3>📝 大G高远球学习路径</h3>
+                <div class="code-block">高远球技术学习顺序（大G方法）：
+1. 先学框架（架拍→引拍→挥拍→击球→随挥）
+2. 再学发力（内旋发力，手腕集中发力）
+3. 后学移动（步法到位，找到击球点）
+4. 最后连贯（框架稳定后，逐步提速）</div>
+
+                <h4>高远球发力的关键（大G强调）</h4>
+                <table>
+                    <thead><tr><th>要素</th><th>大G的说法</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>左手作用</td><td><strong>左手左腿是发力核心</strong></td><td>非持拍手不是摆设，是平衡和蓄力</td></tr>
+                        <tr><td>发力上限</td><td><strong>发力上限更高的方法</strong></td><td>不是硬打，是框架和时机</td></tr>
+                        <tr><td>击球点</td><td><strong>击球点决定发力效率</strong></td><td>固定击球点，动作才能稳定</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 第6课：杀球与吊球 -->
+            <section class="section" id="smash">
+                <h2><span class="course-number">6</span>杀球与吊球入门</h2>
+
+                <div class="card">
+                    <h3>📌 学习目标</h3>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>了解杀球和吊球的基本概念</li>
+                        <li>学会架拍和挥拍的正确框架</li>
+                        <li>能够尝试基础杀球</li>
+                    </ul>
+                </div>
+
+                <h3>📺 推荐视频</h3>
+                <div class="video-list">
+                    <div class="video-item highlight">
+                        <div class="video-title">⭐⭐⭐ 劈吊球完整教学！刘辉教练教你</div>
+                        <div class="video-meta">轻吊劈吊重劈的关键技巧 | 完整教学</div>
+                        <a href="https://www.bilibili.com/video/BV1iF411k7R2/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-title">杀球没劲一招解决！教你如何用3成力打出爆发鞭甩！</div>
+                        <div class="video-meta">大G原创 | 鞭甩发力教学</div>
+                        <a href="https://www.bilibili.com/video/BV1UDHfebEVd/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-title">收吊怎么打？刘辉教练教你收吊的核心技巧</div>
+                        <div class="video-meta">收吊与轻吊的区别变化</div>
+                        <a href="https://www.bilibili.com/video/BV1QC4y1R7jp/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            点击观看
+                        </a>
+                    </div>
+                </div>
+
+                <h3>📝 技术要点（大G教学法）</h3>
+
+                <h4>杀球概念（大G重新定义）</h4>
+                <table>
+                    <thead><tr><th>要素</th><th>大G的说法</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>什么是杀球</td><td><strong>不是挥拍力度，是挥拍速度</strong></td><td>杀球靠挥速，不是蛮力</td></tr>
+                        <tr><td>架拍方式</td><td><strong>静止框架锁拍</strong></td><td>架拍要帅！挥拍要快！</td></tr>
+                        <tr><td>发力方式</td><td><strong>鞭甩发力</strong></td><td>用3成力打出爆发鞭甩</td></tr>
+                        <tr><td>杀球类型</td><td><strong>重杀框架和快杀框架</strong></td><td>三种后场框架各有优缺点</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>吊球入门</h4>
+                <table>
+                    <thead><tr><th>要素</th><th>大G的说法</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>劈吊</td><td><strong>拍面斜切球头</strong></td><td>球路对角，落点好</td></tr>
+                        <tr><td>轻吊/收吊</td><td><strong>引拍不用太大</strong></td><td>太大会难控制</td></tr>
+                        <tr><td>滑拍</td><td><strong>改变拍面角度</strong></td><td>致命的变化球</td></tr>
+                        <tr><td>重劈吊</td><td><strong>业余爆改进阶</strong></td><td>劈吊球加力</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 学习路径建议 -->
+            <section class="section" id="path">
+                <h2>🎯 学习路径建议</h2>
+                
+                <p style="margin-bottom: 15px;">按照以下顺序观看大G羽毛球教学视频，循序渐进掌握羽毛球技术：</p>
+                
+                <div class="learning-path">
+                    <div class="path-item">
+                        <div class="path-number">1</div>
+                        <div class="path-content">
+                            <div class="path-title">握拍内旋发力</div>
+                            <div class="path-video">BV1kc2UY8ELQ（18分钟）</div>
+                        </div>
+                    </div>
+                    <div class="path-item">
+                        <div class="path-number">2</div>
+                        <div class="path-content">
+                            <div class="path-title">正手发高远球</div>
+                            <div class="path-video">BV1Xoe9zkEVT（30分钟）</div>
+                        </div>
+                    </div>
+                    <div class="path-item">
+                        <div class="path-number">3</div>
+                        <div class="path-content">
+                            <div class="path-title">启动步+后场步法</div>
+                            <div class="path-video">BV1CmcRepECr + BV1Rc6GYwEe5</div>
+                        </div>
+                    </div>
+                    <div class="path-item">
+                        <div class="path-number">4</div>
+                        <div class="path-content">
+                            <div class="path-title">反手高远球</div>
+                            <div class="path-video">BV1bBUHYTENd（16分钟）</div>
+                        </div>
+                    </div>
+                    <div class="path-item">
+                        <div class="path-number">5</div>
+                        <div class="path-content">
+                            <div class="path-title">高远球综合</div>
+                            <div class="path-video">BV1src8enEvy</div>
+                        </div>
+                    </div>
+                    <div class="path-item">
+                        <div class="path-number">6</div>
+                        <div class="path-content">
+                            <div class="path-title">吊球入门</div>
+                            <div class="path-video">BV1iF411k7R2</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教学进度 -->
+            <section class="section" id="schedule">
+                <h2>📅 教学进度安排</h2>
+
+                <h3>建议课程表（5周）</h3>
+                <div class="schedule">第1周：握拍与发力基础
+├── 周三：握拍 + 内旋发力（30分钟）
+│   └── 视频：BV1kc2UY8ELQ（18分钟）+ 空挥拍练习
+└── 周六：复习握拍 + 架拍框架（30分钟）
+
+第2周：正手发高远球
+├── 周三：正手发高远球（30分钟）
+│   └── 视频：BV1Xoe9zkEVT（30分钟）
+└── 周六：发球对练 + 发力巩固（30分钟）
+
+第3周：步法入门
+├── 周三：启动步 + 后场步法（30分钟）
+│   └── 视频：BV1CmcRepECr + BV1Rc6GYwEe5
+└── 周六：步法练习 + 发球移动（30分钟）
+
+第4周：反手高远球入门
+├── 周三：反手高远球（30分钟）
+│   └── 视频：BV1bBUHYTENd（16分钟）
+└── 周六：综合对打练习（30分钟）
+
+第5周：高远球综合
+├── 周三：高远球学习路径（30分钟）
+│   └── 视频：BV1src8enEvy
+└── 周六：友谊赛 / 自由对打（30分钟）</div>
+
+                <h3>🎯 学习成果检验</h3>
+                <div class="progress-check">
+                    <div class="check-item">
+                        <input type="checkbox" id="check1">
+                        <label for="check1"><strong>握拍：</strong>能够正确握拍，发力流畅，掌心留空</label>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox" id="check2">
+                        <label for="check2"><strong>发球：</strong>连续10个高远球过网，落在对方后场</label>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox" id="check3">
+                        <label for="check3"><strong>步法：</strong>能够流畅移动，熟练使用启动步</label>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox" id="check4">
+                        <label for="check4"><strong>反手：</strong>能够简单反手回球</label>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox" id="check5">
+                        <label for="check5"><strong>高远球：</strong>能够打出有威力的高远球</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 视频汇总 -->
+            <section class="section" id="videos">
+                <h2>📺 视频链接汇总</h2>
+
+                <h3>⭐⭐⭐ 大G羽毛球核心教学视频（必看）</h3>
+                <div class="video-list">
+                    <div class="video-item highlight">
+                        <div class="video-title">内旋发力握拍教学（18分钟）</div>
+                        <a href="https://www.bilibili.com/video/BV1kc2UY8ELQ/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            BV1kc2UY8ELQ
+                        </a>
+                    </div>
+                    <div class="video-item highlight">
+                        <div class="video-title">正手发高远球教学（30分钟）</div>
+                        <a href="https://www.bilibili.com/video/BV1Xoe9zkEVT/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            BV1Xoe9zkEVT
+                        </a>
+                    </div>
+                    <div class="video-item highlight">
+                        <div class="video-title">启动步的秘密</div>
+                        <a href="https://www.bilibili.com/video/BV1CmcRepECr/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            BV1CmcRepECr
+                        </a>
+                    </div>
+                    <div class="video-item highlight">
+                        <div class="video-title">后场两点步法教学</div>
+                        <a href="https://www.bilibili.com/video/BV1Rc6GYwEe5/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            BV1Rc6GYwEe5
+                        </a>
+                    </div>
+                    <div class="video-item highlight">
+                        <div class="video-title">反手高远球（理论篇，16分钟）</div>
+                        <a href="https://www.bilibili.com/video/BV1bBUHYTENd/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            BV1bBUHYTENd
+                        </a>
+                    </div>
+                    <div class="video-item highlight">
+                        <div class="video-title">业余高远球学习路径</div>
+                        <a href="https://www.bilibili.com/video/BV1src8enEvy/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            BV1src8enEvy
+                        </a>
+                    </div>
+                    <div class="video-item highlight">
+                        <div class="video-title">劈吊球完整教学</div>
+                        <a href="https://www.bilibili.com/video/BV1iF411k7R2/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            BV1iF411k7R2
+                        </a>
+                    </div>
+                </div>
+
+                <h3>⭐⭐ 刘辉教练系列（在大G频道）</h3>
+                <div class="video-list">
+                    <div class="video-item">
+                        <div class="video-title">高远球发力怎么学？刘辉教练线下班</div>
+                        <a href="https://www.bilibili.com/video/BV14X4y1m7af/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            发力动作顺序
+                        </a>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-title">高远球如何改动作？干货讲解</div>
+                        <a href="https://www.bilibili.com/video/BV14X4y1m7af/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            发力上限更高
+                        </a>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-title">什么是框架？刘辉教练教你</div>
+                        <a href="https://www.bilibili.com/video/BV14X4y1m7af/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            有框架打球
+                        </a>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-title">启动步节奏怎么练？</div>
+                        <a href="https://www.bilibili.com/video/BV1CmcRepECr/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            接杀接吊核心
+                        </a>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-title">保姆级反手发力课</div>
+                        <a href="https://www.bilibili.com/video/BV1bBUHYTENd/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            捏两窄边
+                        </a>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-title">收吊怎么打？刘辉教练教你</div>
+                        <a href="https://www.bilibili.com/video/BV1QC4y1R7jp/" target="_blank" class="video-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            收吊核心技巧
+                        </a>
+                    </div>
+                </div>
+
+                <h3>🔗 大G羽毛球频道入口</h3>
+                <div class="card">
+                    <p><strong>频道：</strong><a href="https://space.bilibili.com/1423436652" target="_blank">大G羽毛球</a></p>
+                    <p><strong>粉丝：</strong>19.3万</p>
+                    <p><strong>特色：</strong>与刘辉教练深度合作，业余教学体系完整，原理讲解清晰</p>
+                </div>
+            </section>
+
+                <div class="card" style="border-left-color: #28a745;">
+                    <p><strong>推荐资源：</strong><a href="https://luxury-choux-86bf03.netlify.app" target="_blank">luxury-choux-86bf03.netlify.app</a></p>
+                    <p><strong>内容：</strong>山青浩然羽毛球</p>
+                </div>
+
+
+            <!-- 注意事项 -->
+            <section class="section">
+                <h2>⚠️ 注意事项</h2>
+
+                <div class="dag-tip">
+                    <h4>💡 大G教学法提示</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>先框架后发力</strong>：不要急于发力，先把动作框架做对</li>
+                        <li><strong>内旋是结果不是动作</strong>：不要刻意做内旋，让它自然发生</li>
+                        <li><strong>启动步带方向性</strong>：不是垂直跳，是往来球方向蹬</li>
+                        <li><strong>击球前放松，击球瞬间抓紧</strong>：这是发力集中秘诀</li>
+                        <li><strong>看视频学动作，多练习巩固</strong>：知行合一</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>🛡️ 安全提示</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>运动前充分热身（5-10分钟）</li>
+                        <li>穿着合适的羽毛球运动鞋</li>
+                        <li>使用合适球拍的球拍（新手建议轻拍，拉线20-24磅）</li>
+                        <li>感到不适立即休息</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <h4>💡 温馨提示</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>新手不要急于追求专业动作，先建立正确框架</li>
+                        <li>多看大G视频学习，也要多实践</li>
+                        <li>学长耐心指导，互相帮助</li>
+                        <li>享受运动，保持愉快心情</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>📝 文档更新：2026年4月29日</p>
+            <p>📺 视频来源：<a href="https://space.bilibili.com/1423436652" target="_blank">大G羽毛球</a> · 刘辉教练系列</p>
+            <p style="margin-top: 10px;">🎯 目标：基于大G羽毛球，让每位新手都能系统学习羽毛球！</p>
+            <p style="margin-top: 10px; color: #999;">山青浩然 · 校友羽毛球俱乐部</p>
+        </footer>
+    </div>
+
+    <button class="back-to-top hidden" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // 返回顶部按钮
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // 保存复选框状态到 localStorage
+        const checkboxes = document.querySelectorAll('.check-item input[type="checkbox"]');
+        checkboxes.forEach((checkbox, index) => {
+            // 加载保存的状态
+            const saved = localStorage.getItem(`badminton-check-${index}`);
+            if (saved === 'true') {
+                checkbox.checked = true;
+            }
+
+            // 保存状态
+            checkbox.addEventListener('change', () => {
+                localStorage.setItem(`badminton-check-${index}`, checkbox.checked);
+            });
+        });
+
+        // 平滑滚动到锚点
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const navHeight = document.querySelector('.nav').offsetHeight;
+                const targetPosition = target.offsetTop - navHeight - 10;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
